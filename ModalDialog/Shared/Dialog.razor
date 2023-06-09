@@ -1,0 +1,19 @@
+﻿@if(Show){
+    <div class="dialog-container">
+        <div class="dialog">
+            <div class="dialog-title">Title</div>
+            <div class="dialog-body">Body</div>
+            <div class="dialog-buttons">
+                <button>
+                    Ok
+                </button>
+                <button>
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+}
+@code {
+    [Parameter] public bool Show { get; set; }
+}
