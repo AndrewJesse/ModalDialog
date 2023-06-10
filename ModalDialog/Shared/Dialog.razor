@@ -4,10 +4,10 @@
             <div class="dialog-title">Title</div>
             <div class="dialog-body">Body</div>
             <div class="dialog-buttons">
-                <button>
+                <button @onclick="OnOk">
                     Ok
                 </button>
-                <button>
+                <button @onclick="OnCancel">
                     Cancel
                 </button>
             </div>
@@ -15,5 +15,10 @@
     </div>
 }
 @code {
-    [Parameter] public bool Show { get; set; }
+    [Parameter] 
+    public bool Show { get; set; }
+    [Parameter]
+    public EventCallback <MouseEventArgs> OnOk { get; set; }
+    [Parameter]
+    public EventCallback <MouseEventArgs> OnCancel { get; set; }
 }
