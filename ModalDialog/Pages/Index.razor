@@ -1,7 +1,10 @@
 ﻿@page "/"
 
 <PageTitle>Index</PageTitle>
-<Dialog Show="showDialog"></Dialog>
+<Dialog Show="showDialog">
+    OnCancel="DialogCancelHandler"
+    OnOk="DialogOkHandler"
+</Dialog>
 <button @onclick="OpenDialog">Show Dialog</button>
 @code {
     private bool showDialog = false;
