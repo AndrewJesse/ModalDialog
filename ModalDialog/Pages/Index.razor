@@ -1,9 +1,9 @@
 ﻿@page "/"
 
 <PageTitle>Index</PageTitle>
-<Dialog Show="showDialog">
+<Dialog Show="showDialog"
     OnCancel="DialogCancelHandler"
-    OnOk="DialogOkHandler"
+    OnOk="DialogOkHandler">
 </Dialog>
 <button @onclick="OpenDialog">Show Dialog</button>
 @code {
